@@ -20,7 +20,7 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await Api.post("/login", form);
+      const res = await Api.post(`${import.meta.env.baseURL}/api/login${form}`);
 
       // Save token
       saveAuth(res.data.token);
