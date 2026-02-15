@@ -30,9 +30,9 @@ function Login() {
       const userRole = res.data.user.role;
 
       if (userRole === "admin") {
-        navigate("/admin/dashboard");
+        navigate("/dashboard");
       } else {
-        navigate("/employee/dashboard");
+        navigate("/dashboard");
       }
 
     } catch (err) {
